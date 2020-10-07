@@ -14,30 +14,114 @@
 
 //TODO: Define a function named isOdd that takes in any input and returns true if the input is an odd number, return false for any other situation. You do not need to consider floating-point and decimal numbers.
 
+function isOdd(input){
+    return input % 2 === 1;
+}
+
 
 //TODO: Define a function named isVowel that takes in a single character and returns true if the character is a vowel. *Not including the letter 'y'
+
+function isVowel(input){
+    let vowels = "aeiouAEIOU";
+    return typeof(input) === "string" && input.length === 1 && vowels.includes(input);
+}
 
 
 //TODO: Define a function named combineStrings that takes in two parameters, if both parameters are strings, then return a concatenated string of both parameters. Otherwise, return false.
 
+function combineStrings(input1,input2) {
+    if (typeof input1 === "string" && typeof input2 === "string"){
+        return input1 + input2;
+    }else {
+        return false;
+    }
+
+        }
 
 //TODO: Define a function named sumArgs that takes in three parameters, if they are numbers then add them together. Otherwise return false.
 
+function sumArgs (input1,input2,input3){
+    if (typeof input1 === "number" && typeof input2 === "number" && typeof input3 === "number"){
+        return input1 + input2 + input3;
+    }else{
+        return false;
+    }
+
+
+}
 
 
 //TODO: Define a function named truncateString that takes in a string as the first parameter and a number as the second parameter. Truncate (shorten) the string by the length based on the argument passed in. For example, truncateString("hello world",1) would return "hello worl"
 
+function truncateString(str,num){
+    if (typeof num === "number" && typeof str === "string"){
+        if (num >= str.length){
+            return "";
+        }
+        return str.slice(str,str.length - num);
+    }else{
+        return false;
+    }
+}
 
-//TODO: Define a function named `reverseSign` that takes in a number as the first parameter. Reverse the sign of the argument passed in, return false if the argument is not a number. For example, `reverseSign(1)` would return `-1`.
+
+//TODO: Define a function named `reverseSign` that takes in a number as the first parameter. Reverse the sign of the argument passed in, return false if the argument is not a number. For example, `reverseSign(1)` would return `-1`. reverseSign(num)
+function reverseSign(num){
+    if (num === "" || typeof num === "boolean" || typeof num === "object"){
+        return false;
+    }else if(!isNaN(num)){
+        return num * -1;
+    }else{
+        return false;
+    }
+}
+
 
 
 //TODO: Define a function named `makeUppercase` that takes in a string as the first parameter. Return the argument passed in entirely uppercased, return false if the argument is not a string. For example, `makeUppercase("test")` would return `"TEST"`.
+function makeUppercase(string1){
+    if(typeof string1 === "string" && isNaN(string1)){
+        return string1.toUpperCase();
+    }else{
+        return false;
+    }
+}
 
 
 //TODO: Define a function named `isMultiple` that takes in two `number` parameters. Return `true` if one argument is a multiple of the other, `false` otherwise. For example, `isMultiple(2, 6)` would return `true`.
 
+function isMultiple(input1,input2){
+    if ( input1 === input2){
+        return false;
+    } else if(input2 % input1 === 0){
+    return true;
+    }else{
+        return false;
+    }
+}
+
 
 //TODO: Define a function named `canPurchase` that takes in two `number` parameters, `billAmount` & `availableCash`. Return `true` if `availableCash` is greater than `billAmount`, `false` otherwise. For example, `canPurchase(10, 20)` would return `true`.
+function canPurchase(billAmount,availableCash){
+    if (availableCash > billAmount){
+        return true;
+    }else{
+        return false;
+    }
 
+}
 
 //TODO: Define a function named `getInitials` that takes in two `string` parameters, `first` & `last`. Return the names combined and formatted as initials, return `false` if either parameter is invalid. For example, `getInitials("John", "Snow")` would return `"J.S."`
+
+function getInitials(input1,input2){
+    if (!isNaN(input1) && !isNaN(input2)){
+        return false;
+    }else if(input1 === undefined || input2 === undefined){
+        return false;
+    } else {
+        return truncateString(input1, input1.length -1) + "." + truncateString(input2, input2.length -1) + ".";
+    }
+
+
+}
+
