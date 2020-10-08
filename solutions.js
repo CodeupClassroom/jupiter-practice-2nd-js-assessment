@@ -78,11 +78,19 @@ function makeUppercase(arg) {
 //TODO: Define a function named `isMultiple` that takes in two `number` parameters.
 // Return `true` if one argument is a multiple of the other, `false` otherwise. For example, `isMultiple(2, 6)`
 // would return `true`.
+   function isMultiple(i) {
+    return (numbers (i) % multiples === 0)
+   }
+
+
 
 
 //TODO: Define a function named `canPurchase` that takes in two `number` parameters, `billAmount` & `availableCash`.
 // Return `true` if `availableCash` is greater than `billAmount`, `false` otherwise. For example, `canPurchase(10, 20)`
 // would return `true`.
+
+
+
 
 
 //TODO: Define a function named `getInitials` that takes in two `string` parameters, `first` & `last`.
