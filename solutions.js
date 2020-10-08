@@ -83,6 +83,7 @@ function makeUppercase(arg) {
    }
 
 
+   ,
 
 
 //TODO: Define a function named `canPurchase` that takes in two `number` parameters, `billAmount` & `availableCash`.
