@@ -69,7 +69,10 @@ function reverseSign(arg){
 // Return the argument passed in entirely uppercased, return false if the argument is not a string.
 // For example, `makeUppercase("test")` would return `"TEST"`.
 function makeUppercase(arg) {
-    return (arg === "string" && arg === "string".toUpperCase("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z") )
+    return arg === "string".toUpperCase()
+    if (arg === "string".toLowerCase()){
+        return  "string".toUpperCase()
+    }
 }
 
 //TODO: Define a function named `isMultiple` that takes in two `number` parameters.
